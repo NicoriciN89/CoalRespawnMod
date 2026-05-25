@@ -15,7 +15,6 @@ using UnityEngine;
 
 namespace CoalRespawnMod
 {
-    // ── Структура сохранения ─────────────────────────────────────────────────
     // emptyAt   : ключ спаунера → игровое время (ч) когда он опустел
     // respawnAt : ключ спаунера → игровое время (ч) когда мы его пересоздали
     //             (нужно чтобы переспаунить уголь заново после загрузки сейва,
@@ -28,7 +27,6 @@ namespace CoalRespawnMod
 
     public class Core : MelonMod
     {
-        // ── публичные поля состояния ─────────────────────────────────────────
         internal static MelonLogger.Instance Log;
 
         // scene → (spawnerKey → час опустения)
@@ -46,14 +44,12 @@ namespace CoalRespawnMod
         // Дни для каждого пресета (индекс = respawnPreset)
         private static readonly int[] RespawnPresetDays = { 5, 15, 30, 60 };
 
-        /// <summary>Возвращает количество игровых часов до респауна по текущему пресету.</summary>
         public static float GetRespawnHours()
         {
             int preset = Math.Clamp(Settings.instance.respawnPreset, 0, RespawnPresetDays.Length - 1);
             return RespawnPresetDays[preset] * 24f;
         }
 
-        // ── инициализация ────────────────────────────────────────────────────
         public override void OnInitializeMelon()
         {
             Log = LoggerInstance;
@@ -61,18 +57,15 @@ namespace CoalRespawnMod
             Log.Msg("CoalRespawnMod v1.0.0 loaded");
         }
 
-        // ── вспомогательные методы ──────────────────────────────────────────
         public static bool IsPlayableScene(string scene) =>
             !string.IsNullOrEmpty(scene) &&
             !scene.Contains("MainMenu") &&
             scene != "Boot" &&
             scene != "Empty";
 
-        /// <summary>Уникальный ключ спаунера: сцена + округлённая позиция.</summary>
         public static string SpawnerKey(string scene, Vector3 pos) =>
             $"{scene}|{pos.x:F1}|{pos.y:F1}|{pos.z:F1}";
 
-        // ── сохранение / загрузка ────────────────────────────────────────────
         public static void LoadData()
         {
             string json = dataManager.Load(SaveTag);
@@ -100,14 +93,12 @@ namespace CoalRespawnMod
             dataManager.Save(JsonSerializer.Serialize(data), SaveTag);
         }
 
-        // ── запуск корутины ──────────────────────────────────────────────────
         public static void StartCoroutine()
         {
             if (coroutineHandle != null) MelonCoroutines.Stop(coroutineHandle);
             coroutineHandle = MelonCoroutines.Start(CoalRespawnLoop());
         }
 
-        // ── основная корутина ────────────────────────────────────────────────
         public static IEnumerator CoalRespawnLoop()
         {
             // Небольшая задержка: дать игре время полностью загрузить сцену и расставить объекты
@@ -130,7 +121,6 @@ namespace CoalRespawnMod
             }
         }
 
-        // ── логика проверки и респауна ───────────────────────────────────────
         private static void ProcessCoalSpawners()
         {
             string scene = GameManager.m_ActiveScene;
@@ -163,8 +153,6 @@ namespace CoalRespawnMod
                     continue;
                 }
 
-                // Уголь отсутствует ───────────────────────────────────────────
-
                 // Был ли спаунер недавно пересоздан нашим модом?
                 // (Уголь мог исчезнуть после загрузки сейва — перезаспауним)
                 if (respawnAt[scene].ContainsKey(key))
@@ -194,7 +182,6 @@ namespace CoalRespawnMod
             }
         }
 
-        // ── подсчёт угля рядом со спаунером ─────────────────────────────────
         private static int CountCoalNear(Vector3 pos, float radius)
         {
             int count = 0;
@@ -210,7 +197,6 @@ namespace CoalRespawnMod
             return count;
         }
 
-        // ── спаун угля ───────────────────────────────────────────────────────
         private static void DoSpawnCoal(Vector3 center, float radius)
         {
             int count = UnityEngine.Random.Range(

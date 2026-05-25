@@ -10,11 +10,6 @@ using System.Text.Json;
 
 namespace CoalRespawnMod
 {
-    /// <summary>
-    /// Загружает переводы CR.* из localization.json встроенного в DLL.
-    /// Пользовательский оверрайд: UserData/CoalRespawnMod/localization.json имеет приоритет.
-    /// При ошибке падает на встроенный английский.
-    /// </summary>
     internal static class LocalizationManager
     {
         private static Dictionary<string, Dictionary<string, string>> _data;
@@ -26,7 +21,6 @@ namespace CoalRespawnMod
 
         private const string EmbeddedResource = "CoalRespawnMod.localization.json";
 
-        // ── загрузка ─────────────────────────────────────────────────────────
         private static Dictionary<string, Dictionary<string, string>> Load()
         {
             // 1. Пользовательский оверрайд: UserData/CoalRespawnMod/localization.json
@@ -68,17 +62,16 @@ namespace CoalRespawnMod
             catch (Exception ex) { MelonLogger.Warning($"[CoalRespawnMod] Localization JSON parse error: {ex.Message}"); return null; }
         }
 
-        // ── получение строки по ключу ────────────────────────────────────────
+
         internal static string Get(string key)
         {
             string lang = Localization.Language ?? "English";
             var data = Data;
             if (data.TryGetValue(lang,      out var dict) && dict.TryGetValue(key, out string val))  return val;
             if (data.TryGetValue("English", out var en)   && en.TryGetValue(key,   out string enVal)) return enVal;
-            return key; // крайний случай: вернуть сам ключ
+            return key;
         }
 
-        // ── минимальный английский фолбэк (без JSON) ─────────────────────────
         private static readonly Dictionary<string, Dictionary<string, string>> Fallback = new()
         {
             ["English"] = new()
@@ -96,7 +89,7 @@ namespace CoalRespawnMod
         };
     }
 
-    // ── патч Localization.Get — перехватывает ключи CR.* ─────────────────────
+
     [HarmonyPatch(typeof(Localization), nameof(Localization.Get))]
     internal static class Patch_LocalizationGet
     {
@@ -107,10 +100,6 @@ namespace CoalRespawnMod
         }
     }
 
-    /// <summary>
-    /// Патч на DescriptionHolder.get_Text (ModSettings) —
-    /// перехватывает чтение описания, когда язык уже установлен.
-    /// </summary>
     [HarmonyPatch]
     internal static class Patch_DescriptionText
     {

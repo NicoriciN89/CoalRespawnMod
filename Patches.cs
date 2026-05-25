@@ -4,7 +4,7 @@ using MelonLoader;
 
 namespace CoalRespawnMod
 {
-    // ── Загрузка сцены: восстановить данные и запустить корутину ─────────────
+
     [HarmonyPatch(typeof(SaveGameSystem), nameof(SaveGameSystem.LoadSceneData))]
     internal static class Patch_LoadSceneData
     {
@@ -15,7 +15,7 @@ namespace CoalRespawnMod
         }
     }
 
-    // ── Сохранение сцены: записать текущее состояние ─────────────────────────
+
     [HarmonyPatch(typeof(SaveGameSystem), nameof(SaveGameSystem.SaveSceneData))]
     internal static class Patch_SaveSceneData
     {
@@ -25,7 +25,7 @@ namespace CoalRespawnMod
         }
     }
 
-    // ── Выход в главное меню: остановить корутину и сбросить состояние ────────
+
     [HarmonyPatch(typeof(GameManager), nameof(GameManager.DoExitToMainMenu))]
     internal static class Patch_ExitToMenu
     {
