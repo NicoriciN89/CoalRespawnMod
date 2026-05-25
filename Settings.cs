@@ -15,25 +15,25 @@ namespace CoalRespawnMod
 
     internal class CoalRespawnSettings : JsonModSettings
     {
-        [Section("CR.SECTION")]
+        [Section("CR.SECTION", Localize = true)]
 
-        [Name("CR.RESPAWN_TIME")]
-        [Description("CR.DESC_RESPAWN_TIME")]
+        [Name("CR.RESPAWN_TIME", Localize = true)]
+        [Description("CR.DESC_RESPAWN_TIME", Localize = true)]
         [Choice(new string[] { "Fast (5 days)", "Normal (15 days)", "Slow (30 days)", "Realistic (60 days)" })]
         public int respawnPreset = 1;   // 0=5d  1=15d  2=30d  3=60d
 
-        [Name("CR.MIN_COAL")]
-        [Description("CR.DESC_MIN_COAL")]
+        [Name("CR.MIN_COAL", Localize = true)]
+        [Description("CR.DESC_MIN_COAL", Localize = true)]
         [Slider(1, 8)]
         public int minCoal = 2;
 
-        [Name("CR.MAX_COAL")]
-        [Description("CR.DESC_MAX_COAL")]
+        [Name("CR.MAX_COAL", Localize = true)]
+        [Description("CR.DESC_MAX_COAL", Localize = true)]
         [Slider(1, 8)]
         public int maxCoal = 4;
 
-        [Name("CR.SCAN_RADIUS")]
-        [Description("CR.DESC_SCAN_RADIUS")]
+        [Name("CR.SCAN_RADIUS", Localize = true)]
+        [Description("CR.DESC_SCAN_RADIUS", Localize = true)]
         [Slider(1, 12)]
         public int scanRadius = 4;
     }
