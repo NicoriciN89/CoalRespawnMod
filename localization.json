@@ -1,0 +1,167 @@
+{
+  "English": {
+    "CR.SECTION":           "Cave Coal Respawn",
+    "CR.RESPAWN_TIME":      "Respawn time",
+    "CR.DESC_RESPAWN_TIME": "How long before an emptied coal deposit refills itself.\n\n  Fast        \u2014  5 in-game days\n  Normal      \u2014 15 in-game days (default)\n  Slow        \u2014 30 in-game days\n  Realistic   \u2014 60 in-game days",
+    "CR.MIN_COAL":          "Min coal pieces",
+    "CR.DESC_MIN_COAL":     "Minimum number of GEAR_Coal pieces spawned per deposit.\nDefault: 2",
+    "CR.MAX_COAL":          "Max coal pieces",
+    "CR.DESC_MAX_COAL":     "Maximum number of GEAR_Coal pieces spawned per deposit.\nDefault: 4",
+    "CR.SCAN_RADIUS":       "Scan radius (m)",
+    "CR.DESC_SCAN_RADIUS":  "Radius in metres to detect existing coal around each deposit.\nIncrease if deposits are large; decrease if they are close together.\nDefault: 4"
+  },
+  "Russian": {
+    "CR.SECTION":           "\u0412\u043e\u0437\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0435 \u0443\u0433\u043b\u044f \u0432 \u043f\u0435\u0449\u0435\u0440\u0430\u0445",
+    "CR.RESPAWN_TIME":      "\u0412\u0440\u0435\u043c\u044f \u0432\u043e\u0437\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u044f",
+    "CR.DESC_RESPAWN_TIME": "\u0427\u0435\u0440\u0435\u0437 \u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0432\u0440\u0435\u043c\u0435\u043d\u0438 \u043e\u043f\u0443\u0441\u0442\u0435\u0432\u0448\u0438\u0439 \u0443\u0433\u043e\u043b\u044c\u043d\u044b\u0439 \u0443\u0437\u0435\u043b \u0437\u0430\u043f\u043e\u043b\u043d\u0438\u0442\u0441\u044f \u0441\u043d\u043e\u0432\u0430.\n\n  \u0411\u044b\u0441\u0442\u0440\u043e       \u2014  5 \u0438\u0433\u0440\u043e\u0432\u044b\u0445 \u0434\u043d\u0435\u0439\n  \u041d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u043e    \u2014 15 \u0438\u0433\u0440\u043e\u0432\u044b\u0445 \u0434\u043d\u0435\u0439 (\u043f\u043e \u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e)\n  \u041c\u0435\u0434\u043b\u0435\u043d\u043d\u043e    \u2014 30 \u0438\u0433\u0440\u043e\u0432\u044b\u0445 \u0434\u043d\u0435\u0439\n  \u0420\u0435\u0430\u043b\u0438\u0441\u0442\u0438\u0447\u043d\u043e  \u2014 60 \u0438\u0433\u0440\u043e\u0432\u044b\u0445 \u0434\u043d\u0435\u0439",
+    "CR.MIN_COAL":          "\u041c\u0438\u043d. \u043a\u0443\u0441\u043a\u043e\u0432 \u0443\u0433\u043b\u044f",
+    "CR.DESC_MIN_COAL":     "\u041c\u0438\u043d\u0438\u043c\u0430\u043b\u044c\u043d\u043e\u0435 \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0443\u0433\u043b\u044f (GEAR_Coal), \u0432\u043e\u0437\u0440\u043e\u0436\u0434\u0430\u0435\u043c\u043e\u0433\u043e \u0432 \u043a\u0430\u0436\u0434\u043e\u043c \u0443\u0437\u043b\u0435.\n\u041f\u043e \u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e: 2",
+    "CR.MAX_COAL":          "\u041c\u0430\u043a\u0441. \u043a\u0443\u0441\u043a\u043e\u0432 \u0443\u0433\u043b\u044f",
+    "CR.DESC_MAX_COAL":     "\u041c\u0430\u043a\u0441\u0438\u043c\u0430\u043b\u044c\u043d\u043e\u0435 \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0443\u0433\u043b\u044f (GEAR_Coal), \u0432\u043e\u0437\u0440\u043e\u0436\u0434\u0430\u0435\u043c\u043e\u0433\u043e \u0432 \u043a\u0430\u0436\u0434\u043e\u043c \u0443\u0437\u043b\u0435.\n\u041f\u043e \u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e: 4",
+    "CR.SCAN_RADIUS":       "\u0420\u0430\u0434\u0438\u0443\u0441 \u043e\u0431\u043d\u0430\u0440\u0443\u0436\u0435\u043d\u0438\u044f (\u043c)",
+    "CR.DESC_SCAN_RADIUS":  "\u0420\u0430\u0434\u0438\u0443\u0441 \u0432 \u043c\u0435\u0442\u0440\u0430\u0445 \u0432\u043e\u043a\u0440\u0443\u0433 \u043a\u0430\u0436\u0434\u043e\u0433\u043e \u0443\u0437\u043b\u0430 \u0434\u043b\u044f \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0438 \u043d\u0430\u043b\u0438\u0447\u0438\u044f \u0443\u0433\u043b\u044f.\n\u0423\u0432\u0435\u043b\u0438\u0447\u044c\u0442\u0435, \u0435\u0441\u043b\u0438 \u0443\u0437\u043b\u044b \u0431\u043e\u043b\u044c\u0448\u0438\u0435; \u0443\u043c\u0435\u043d\u044c\u0448\u0438\u0442\u0435, \u0435\u0441\u043b\u0438 \u043e\u043d\u0438 \u0440\u0430\u0441\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u044b \u0431\u043b\u0438\u0437\u043a\u043e.\n\u041f\u043e \u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e: 4"
+  },
+  "French": {
+    "CR.SECTION":           "R\u00e9apparition du Charbon en Grotte",
+    "CR.RESPAWN_TIME":      "Temps de r\u00e9apparition",
+    "CR.DESC_RESPAWN_TIME": "D\u00e9lai avant qu\u2019un gisement \u00e9puis\u00e9 se recharge.\n\n  Rapide    \u2014  5 jours en jeu\n  Normal    \u2014 15 jours en jeu (d\u00e9faut)\n  Lent      \u2014 30 jours en jeu\n  R\u00e9aliste  \u2014 60 jours en jeu",
+    "CR.MIN_COAL":          "Morceaux de charbon min.",
+    "CR.DESC_MIN_COAL":     "Nombre minimum de morceaux de charbon (GEAR_Coal) par gisement.\nD\u00e9faut : 2",
+    "CR.MAX_COAL":          "Morceaux de charbon max.",
+    "CR.DESC_MAX_COAL":     "Nombre maximum de morceaux de charbon (GEAR_Coal) par gisement.\nD\u00e9faut : 4",
+    "CR.SCAN_RADIUS":       "Rayon de d\u00e9tection (m)",
+    "CR.DESC_SCAN_RADIUS":  "Rayon en m\u00e8tres pour d\u00e9tecter le charbon autour du gisement.\nAugmentez si les gisements sont grands, diminuez s\u2019ils sont proches.\nD\u00e9faut : 4"
+  },
+  "German": {
+    "CR.SECTION":           "Kohle-Respawn in H\u00f6hlen",
+    "CR.RESPAWN_TIME":      "Respawn-Zeit",
+    "CR.DESC_RESPAWN_TIME": "Wie lange, bevor eine leere Kohlelagerst\u00e4tte wieder bef\u00fcllt wird.\n\n  Schnell     \u2014  5 Spieltage\n  Normal      \u2014 15 Spieltage (Standard)\n  Langsam     \u2014 30 Spieltage\n  Realistisch \u2014 60 Spieltage",
+    "CR.MIN_COAL":          "Min. Kohlest\u00fccke",
+    "CR.DESC_MIN_COAL":     "Minimale Anzahl Kohlest\u00fccke (GEAR_Coal) pro Lagerst\u00e4tte.\nStandard: 2",
+    "CR.MAX_COAL":          "Max. Kohlest\u00fccke",
+    "CR.DESC_MAX_COAL":     "Maximale Anzahl Kohlest\u00fccke (GEAR_Coal) pro Lagerst\u00e4tte.\nStandard: 4",
+    "CR.SCAN_RADIUS":       "Scan-Radius (m)",
+    "CR.DESC_SCAN_RADIUS":  "Radius in Metern zur Erkennung vorhandener Kohle um jede Lagerst\u00e4tte.\nVergr\u00f6\u00dfern bei gro\u00dfen Lagerst\u00e4tten, verkleinern wenn sie eng beieinander liegen.\nStandard: 4"
+  },
+  "Spanish": {
+    "CR.SECTION":           "Reaparici\u00f3n de Carb\u00f3n en Cuevas",
+    "CR.RESPAWN_TIME":      "Tiempo de reaparici\u00f3n",
+    "CR.DESC_RESPAWN_TIME": "Tiempo antes de que un dep\u00f3sito de carb\u00f3n vac\u00edo se recargue.\n\n  R\u00e1pido   \u2014  5 d\u00edas de juego\n  Normal   \u2014 15 d\u00edas de juego (predeterminado)\n  Lento    \u2014 30 d\u00edas de juego\n  Realista \u2014 60 d\u00edas de juego",
+    "CR.MIN_COAL":          "M\u00edn. trozos de carb\u00f3n",
+    "CR.DESC_MIN_COAL":     "N\u00famero m\u00ednimo de trozos de carb\u00f3n (GEAR_Coal) por dep\u00f3sito.\nPredeterminado: 2",
+    "CR.MAX_COAL":          "M\u00e1x. trozos de carb\u00f3n",
+    "CR.DESC_MAX_COAL":     "N\u00famero m\u00e1ximo de trozos de carb\u00f3n (GEAR_Coal) por dep\u00f3sito.\nPredeterminado: 4",
+    "CR.SCAN_RADIUS":       "Radio de detecci\u00f3n (m)",
+    "CR.DESC_SCAN_RADIUS":  "Radio en metros para detectar carb\u00f3n existente alrededor de cada dep\u00f3sito.\nAumente si los dep\u00f3sitos son grandes, reduzca si est\u00e1n cerca.\nPredeterminado: 4"
+  },
+  "Brazilian": {
+    "CR.SECTION":           "Reaparecimento de Carv\u00e3o em Cavernas",
+    "CR.RESPAWN_TIME":      "Tempo de reaparecimento",
+    "CR.DESC_RESPAWN_TIME": "Quanto tempo antes que um dep\u00f3sito de carv\u00e3o esvaziado se recarregue.\n\n  R\u00e1pido   \u2014  5 dias de jogo\n  Normal   \u2014 15 dias de jogo (padr\u00e3o)\n  Lento    \u2014 30 dias de jogo\n  Realista \u2014 60 dias de jogo",
+    "CR.MIN_COAL":          "M\u00edn. peda\u00e7os de carv\u00e3o",
+    "CR.DESC_MIN_COAL":     "N\u00famero m\u00ednimo de peda\u00e7os de carv\u00e3o (GEAR_Coal) por dep\u00f3sito.\nPadr\u00e3o: 2",
+    "CR.MAX_COAL":          "M\u00e1x. peda\u00e7os de carv\u00e3o",
+    "CR.DESC_MAX_COAL":     "N\u00famero m\u00e1ximo de peda\u00e7os de carv\u00e3o (GEAR_Coal) por dep\u00f3sito.\nPadr\u00e3o: 4",
+    "CR.SCAN_RADIUS":       "Raio de detec\u00e7\u00e3o (m)",
+    "CR.DESC_SCAN_RADIUS":  "Raio em metros para detectar carv\u00e3o existente ao redor de cada dep\u00f3sito.\nAumente se os dep\u00f3sitos forem grandes, reduza se estiverem pr\u00f3ximos.\nPadr\u00e3o: 4"
+  },
+  "Polish": {
+    "CR.SECTION":           "Odrodzenie W\u0119gla w Jaskiniach",
+    "CR.RESPAWN_TIME":      "Czas odrodzenia",
+    "CR.DESC_RESPAWN_TIME": "Jak d\u0142ugo zanim opr\u00f3\u017cnione z\u0142o\u017ce w\u0119gla si\u0119 uzupe\u0142ni.\n\n  Szybko        \u2014  5 dni w grze\n  Normalnie     \u2014 15 dni w grze (domy\u015blnie)\n  Wolno         \u2014 30 dni w grze\n  Realistycznie \u2014 60 dni w grze",
+    "CR.MIN_COAL":          "Min. kawa\u0142k\u00f3w w\u0119gla",
+    "CR.DESC_MIN_COAL":     "Minimalna liczba kawa\u0142k\u00f3w w\u0119gla (GEAR_Coal) na z\u0142o\u017ce.\nDomy\u015blnie: 2",
+    "CR.MAX_COAL":          "Maks. kawa\u0142k\u00f3w w\u0119gla",
+    "CR.DESC_MAX_COAL":     "Maksymalna liczba kawa\u0142k\u00f3w w\u0119gla (GEAR_Coal) na z\u0142o\u017ce.\nDomy\u015blnie: 4",
+    "CR.SCAN_RADIUS":       "Promie\u0144 wykrywania (m)",
+    "CR.DESC_SCAN_RADIUS":  "Promie\u0144 w metrach do wykrywania w\u0119gla wok\u00f3\u0142 ka\u017cdego z\u0142o\u017ca.\nZwi\u0119ksz je\u015bli z\u0142o\u017ca s\u0105 du\u017ce, zmniejsz je\u015bli s\u0105 blisko siebie.\nDomy\u015blnie: 4"
+  },
+  "Czech": {
+    "CR.SECTION":           "Obnova Uhl\u00ed v Jeskyn\u00edch",
+    "CR.RESPAWN_TIME":      "\u010cas obnovy",
+    "CR.DESC_RESPAWN_TIME": "Jak dlouho trv\u00e1, ne\u017e se vypr\u00e1zdn\u011bn\u00e9 nalezi\u0161t\u011b uhl\u00ed op\u011bt napln\u00ed.\n\n  Rychle      \u2014  5 hern\u00edch dn\u00ed\n  Norm\u00e1ln\u011b    \u2014 15 hern\u00edch dn\u00ed (v\u00fdchoz\u00ed)\n  Pomalu      \u2014 30 hern\u00edch dn\u00ed\n  Realisticky \u2014 60 hern\u00edch dn\u00ed",
+    "CR.MIN_COAL":          "Min. kus\u016f uhl\u00ed",
+    "CR.DESC_MIN_COAL":     "Minim\u00e1ln\u00ed po\u010det kus\u016f uhl\u00ed (GEAR_Coal) na nalezi\u0161t\u011b.\nV\u00fdchoz\u00ed: 2",
+    "CR.MAX_COAL":          "Max. kus\u016f uhl\u00ed",
+    "CR.DESC_MAX_COAL":     "Maxim\u00e1ln\u00ed po\u010det kus\u016f uhl\u00ed (GEAR_Coal) na nalezi\u0161t\u011b.\nV\u00fdchoz\u00ed: 4",
+    "CR.SCAN_RADIUS":       "Polom\u011br skenovac\u00ed (m)",
+    "CR.DESC_SCAN_RADIUS":  "Polom\u011br v metrech pro detekci st\u00e1vaj\u00edc\u00edho uhl\u00ed kolem ka\u017ed\u00e9ho nalezi\u0161t\u011b.\nZv\u00fd\u0161te pro velk\u00e1 nalezi\u0161t\u011b, sn\u00ed\u017eete pro bl\u00edzk\u00e1.\nV\u00fdchoz\u00ed: 4"
+  },
+  "Turkish": {
+    "CR.SECTION":           "Ma\u011faralarda K\u00f6m\u00fcr Yeniden Do\u011fu\u015fu",
+    "CR.RESPAWN_TIME":      "Yeniden do\u011fu\u015f s\u00fcresi",
+    "CR.DESC_RESPAWN_TIME": "Bo\u015falt\u0131lm\u0131\u015f bir k\u00f6m\u00fcr yata\u011f\u0131n\u0131n yeniden dolmas\u0131 i\u00e7in gereken s\u00fcre.\n\n  H\u0131zl\u0131      \u2014  5 oyun g\u00fcn\u00fc\n  Normal     \u2014 15 oyun g\u00fcn\u00fc (varsay\u0131lan)\n  Yava\u015f      \u2014 30 oyun g\u00fcn\u00fc\n  Ger\u00e7ek\u00e7i   \u2014 60 oyun g\u00fcn\u00fc",
+    "CR.MIN_COAL":          "Min. k\u00f6m\u00fcr par\u00e7as\u0131",
+    "CR.DESC_MIN_COAL":     "Her yatakta olu\u015fturulan minimum k\u00f6m\u00fcr (GEAR_Coal) par\u00e7as\u0131 say\u0131s\u0131.\nVarsay\u0131lan: 2",
+    "CR.MAX_COAL":          "Maks. k\u00f6m\u00fcr par\u00e7as\u0131",
+    "CR.DESC_MAX_COAL":     "Her yatakta olu\u015fturulan maksimum k\u00f6m\u00fcr (GEAR_Coal) par\u00e7as\u0131 say\u0131s\u0131.\nVarsay\u0131lan: 4",
+    "CR.SCAN_RADIUS":       "Tarama yar\u0131\u00e7ap\u0131 (m)",
+    "CR.DESC_SCAN_RADIUS":  "Her yata\u011f\u0131n \u00e7evresindeki mevcut k\u00f6m\u00fcr\u00fc tespit etmek i\u00e7in metre cinsinden yar\u0131\u00e7ap.\nYataklar b\u00fcy\u00fckse art\u0131r\u0131n, birbirine yak\u0131nsa azalt\u0131n.\nVarsay\u0131lan: 4"
+  },
+  "Italian": {
+    "CR.SECTION":           "Rinascita del Carbone nelle Grotte",
+    "CR.RESPAWN_TIME":      "Tempo di rinascita",
+    "CR.DESC_RESPAWN_TIME": "Quanto tempo prima che un giacimento svuotato si ricarichi.\n\n  Veloce     \u2014  5 giorni di gioco\n  Normale    \u2014 15 giorni di gioco (predefinito)\n  Lento      \u2014 30 giorni di gioco\n  Realistico \u2014 60 giorni di gioco",
+    "CR.MIN_COAL":          "Pezzi di carbone min.",
+    "CR.DESC_MIN_COAL":     "Numero minimo di pezzi di carbone (GEAR_Coal) per giacimento.\nPredefinito: 2",
+    "CR.MAX_COAL":          "Pezzi di carbone max.",
+    "CR.DESC_MAX_COAL":     "Numero massimo di pezzi di carbone (GEAR_Coal) per giacimento.\nPredefinito: 4",
+    "CR.SCAN_RADIUS":       "Raggio di rilevamento (m)",
+    "CR.DESC_SCAN_RADIUS":  "Raggio in metri per rilevare il carbone attorno ad ogni giacimento.\nAumentare se i giacimenti sono grandi, ridurre se sono vicini.\nPredefinito: 4"
+  },
+  "Dutch": {
+    "CR.SECTION":           "Koolrespawn in Grotten",
+    "CR.RESPAWN_TIME":      "Respawn-tijd",
+    "CR.DESC_RESPAWN_TIME": "Hoe lang duurt het voordat een leeggeraakte kolenlaag zich weer vult.\n\n  Snel        \u2014  5 speldagen\n  Normaal     \u2014 15 speldagen (standaard)\n  Langzaam    \u2014 30 speldagen\n  Realistisch \u2014 60 speldagen",
+    "CR.MIN_COAL":          "Min. kolenstukken",
+    "CR.DESC_MIN_COAL":     "Minimaal aantal kolenstukken (GEAR_Coal) per laag.\nStandaard: 2",
+    "CR.MAX_COAL":          "Max. kolenstukken",
+    "CR.DESC_MAX_COAL":     "Maximaal aantal kolenstukken (GEAR_Coal) per laag.\nStandaard: 4",
+    "CR.SCAN_RADIUS":       "Scanstraal (m)",
+    "CR.DESC_SCAN_RADIUS":  "Straal in meters voor het detecteren van bestaande kolen rond elke laag.\nVergroot bij grote lagen, verklein als ze dichtbij zijn.\nStandaard: 4"
+  },
+  "Japanese": {
+    "CR.SECTION":           "\u6d1e\u7a9f\u306e\u77f3\u70ad\u30ea\u30b9\u30dd\u30fc\u30f3",
+    "CR.RESPAWN_TIME":      "\u30ea\u30b9\u30dd\u30fc\u30f3\u6642\u9593",
+    "CR.DESC_RESPAWN_TIME": "\u7a7a\u306b\u306a\u3063\u305f\u77f3\u70ad\u9271\u8108\u304c\u518d\u3073\u88dc\u5145\u3055\u308c\u308b\u307e\u3067\u306e\u6642\u9593\u3002\n\n  \u901f\u3044       \u2014  5 \u30b2\u30fc\u30e0\u65e5\n  \u666e\u901a       \u2014 15 \u30b2\u30fc\u30e0\u65e5\uff08\u30c7\u30d5\u30a9\u30eb\u30c8\uff09\n  \u9045\u3044       \u2014 30 \u30b2\u30fc\u30e0\u65e5\n  \u30ea\u30a2\u30eb     \u2014 60 \u30b2\u30fc\u30e0\u65e5",
+    "CR.MIN_COAL":          "\u77f3\u70ad\u306e\u6700\u5c0f\u500b\u6570",
+    "CR.DESC_MIN_COAL":     "\u9271\u8108\u3054\u3068\u306b\u30b9\u30dd\u30fc\u30f3\u3059\u308b\u77f3\u70ad (GEAR_Coal) \u306e\u6700\u5c0f\u500b\u6570\u3002\n\u30c7\u30d5\u30a9\u30eb\u30c8: 2",
+    "CR.MAX_COAL":          "\u77f3\u70ad\u306e\u6700\u5927\u500b\u6570",
+    "CR.DESC_MAX_COAL":     "\u9271\u8108\u3054\u3068\u306b\u30b9\u30dd\u30fc\u30f3\u3059\u308b\u77f3\u70ad (GEAR_Coal) \u306e\u6700\u5927\u500b\u6570\u3002\n\u30c7\u30d5\u30a9\u30eb\u30c8: 4",
+    "CR.SCAN_RADIUS":       "\u30b9\u30ad\u30e3\u30f3\u534a\u5f84 (m)",
+    "CR.DESC_SCAN_RADIUS":  "\u5404\u9271\u8108\u5468\u8fba\u306e\u77f3\u70ad\u3092\u691c\u51fa\u3059\u308b\u305f\u3081\u306e\u534a\u5f84\uff08\u30e1\u30fc\u30c8\u30eb\uff09\u3002\n\u9271\u8108\u304c\u5927\u304d\u3051\u308c\u3070\u5897\u3084\u3057\u3001\u8fd1\u304f\u306b\u3042\u308c\u3070\u6e1b\u3089\u3057\u3066\u304f\u3060\u3055\u3044\u3002\n\u30c7\u30d5\u30a9\u30eb\u30c8: 4"
+  },
+  "Korean": {
+    "CR.SECTION":           "\ub3d9\uad74 \uc11d\ud0c4 \ub9ac\uc2a4\ud3f0",
+    "CR.RESPAWN_TIME":      "\ub9ac\uc2a4\ud3f0 \uc2dc\uac04",
+    "CR.DESC_RESPAWN_TIME": "\ube44\uc5b4\uc788\ub294 \uc11d\ud0c4 \uad11\ub9e5\uc774 \ub2e4\uc2dc \ucc44\uc6cc\uc9c0\ub294 \ub370 \uac78\ub9ac\ub294 \uc2dc\uac04.\n\n  \ube60\ub984   \u2014  5 \uac8c\uc784 \uc77c\n  \ubcf4\ud1b5   \u2014 15 \uac8c\uc784 \uc77c (\uae30\ubcf8)\n  \ub290\ub9bc   \u2014 30 \uac8c\uc784 \uc77c\n  \ud604\uc2e4\uc801 \u2014 60 \uac8c\uc784 \uc77c",
+    "CR.MIN_COAL":          "\ucd5c\uc18c \uc11d\ud0c4 \uc870\uac01",
+    "CR.DESC_MIN_COAL":     "\uad11\ub9e5\ub2f9 \uc2a4\ud3f0\ub418\ub294 \ucd5c\uc18c \uc11d\ud0c4 (GEAR_Coal) \uc870\uac01 \uc218.\n\uae30\ubcf8: 2",
+    "CR.MAX_COAL":          "\ucd5c\ub300 \uc11d\ud0c4 \uc870\uac01",
+    "CR.DESC_MAX_COAL":     "\uad11\ub9e5\ub2f9 \uc2a4\ud3f0\ub418\ub294 \ucd5c\ub300 \uc11d\ud0c4 (GEAR_Coal) \uc870\uac01 \uc218.\n\uae30\ubcf8: 4",
+    "CR.SCAN_RADIUS":       "\uc2a4\uce94 \ubc18\uacbd (m)",
+    "CR.DESC_SCAN_RADIUS":  "\uac01 \uad11\ub9e5 \uc8fc\ubcc0\uc758 \uae30\uc874 \uc11d\ud0c4\uc744 \uac10\uc9c0\ud558\ub294 \ubc18\uacbd(\ubbf8\ud130).\n\uad11\ub9e5\uc774 \ud06c\uba74 \ub298\ub9ac\uace0, \uac00\uae4c\uc774 \uc788\uc73c\uba74 \uc904\uc774\uc138\uc694.\n\uae30\ubcf8: 4"
+  },
+  "ChineseSimplified": {
+    "CR.SECTION":           "\u6d1e\u7a74\u7164\u70ad\u91cd\u751f",
+    "CR.RESPAWN_TIME":      "\u91cd\u751f\u65f6\u95f4",
+    "CR.DESC_RESPAWN_TIME": "\u7a7a\u7f6e\u7684\u7164\u7840\u8282\u70b9\u91cd\u65b0\u586b\u5145\u6240\u9700\u7684\u65f6\u95f4\u3002\n\n  \u5feb\u901f   \u2014  5 \u6e38\u620f\u5929\n  \u666e\u901a   \u2014 15 \u6e38\u620f\u5929\uff08\u9ed8\u8ba4\uff09\n  \u7f13\u6162   \u2014 30 \u6e38\u620f\u5929\n  \u771f\u5b9e   \u2014 60 \u6e38\u620f\u5929",
+    "CR.MIN_COAL":          "\u6700\u5c11\u7164\u5757\u6570",
+    "CR.DESC_MIN_COAL":     "\u6bcf\u4e2a\u77ff\u70b9\u5237\u65b0\u7684\u6700\u5c11\u7164\u70ad (GEAR_Coal) \u6570\u91cf\u3002\n\u9ed8\u8ba4: 2",
+    "CR.MAX_COAL":          "\u6700\u591a\u7164\u5757\u6570",
+    "CR.DESC_MAX_COAL":     "\u6bcf\u4e2a\u77ff\u70b9\u5237\u65b0\u7684\u6700\u591a\u7164\u70ad (GEAR_Coal) \u6570\u91cf\u3002\n\u9ed8\u8ba4: 4",
+    "CR.SCAN_RADIUS":       "\u626b\u63cf\u534a\u5f84 (\u7c73)",
+    "CR.DESC_SCAN_RADIUS":  "\u6bcf\u4e2a\u77ff\u70b9\u5468\u56f4\u68c0\u6d4b\u73b0\u6709\u7164\u70ad\u7684\u534a\u5f84\uff08\u7c73\uff09\u3002\n\u77ff\u70b9\u5927\u5219\u589e\u5927\uff0c\u8ddd\u79bb\u8fd1\u5219\u51cf\u5c0f\u3002\n\u9ed8\u8ba4: 4"
+  },
+  "ChineseTraditional": {
+    "CR.SECTION":           "\u6d1e\u7a74\u7164\u70ad\u91cd\u751f",
+    "CR.RESPAWN_TIME":      "\u91cd\u751f\u6642\u9593",
+    "CR.DESC_RESPAWN_TIME": "\u7a7a\u7f6e\u7684\u7164\u77ff\u7bc0\u9ede\u91cd\u65b0\u586b\u5145\u6240\u9700\u7684\u6642\u9593\u3002\n\n  \u5feb\u901f   \u2014  5 \u904a\u6232\u5929\n  \u666e\u901a   \u2014 15 \u904a\u6232\u5929\uff08\u9810\u8a2d\uff09\n  \u7de9\u6162   \u2014 30 \u904a\u6232\u5929\n  \u771f\u5be6   \u2014 60 \u904a\u6232\u5929",
+    "CR.MIN_COAL":          "\u6700\u5c11\u7164\u584a\u6578",
+    "CR.DESC_MIN_COAL":     "\u6bcf\u500b\u7926\u9ede\u5237\u65b0\u7684\u6700\u5c11\u7164\u70ad (GEAR_Coal) \u6578\u91cf\u3002\n\u9810\u8a2d: 2",
+    "CR.MAX_COAL":          "\u6700\u591a\u7164\u584a\u6578",
+    "CR.DESC_MAX_COAL":     "\u6bcf\u500b\u7926\u9ede\u5237\u65b0\u7684\u6700\u591a\u7164\u70ad (GEAR_Coal) \u6578\u91cf\u3002\n\u9810\u8a2d: 4",
+    "CR.SCAN_RADIUS":       "\u6383\u63cf\u534a\u5f91 (\u7c73)",
+    "CR.DESC_SCAN_RADIUS":  "\u6bcf\u500b\u7926\u9ede\u5468\u570d\u5075\u6e2c\u73fe\u6709\u7164\u70ad\u7684\u534a\u5f91\uff08\u7c73\uff09\u3002\n\u7926\u9ede\u5927\u5247\u589e\u5927\uff0c\u8ddd\u96e2\u8fd1\u5247\u6e1b\u5c0f\u3002\n\u9810\u8a2d: 4"
+  }
+}
