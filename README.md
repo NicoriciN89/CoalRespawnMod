@@ -48,9 +48,7 @@ Requires the game to be installed at the path set in the `.csproj` HintPath entr
 3. Once the configured respawn time has elapsed, 2–4 coal pieces are spawned at random offsets inside the deposit
 4. State is saved per-scene per-position via **ModData** — survives across sessions
 
-## Custom Translations
 
-To override or add a translation, place your own `localization.json` at:
 ```
 The Long Dark/UserData/CoalRespawnMod/localization.json
 ```
