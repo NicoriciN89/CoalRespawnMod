@@ -5,11 +5,17 @@ A MelonLoader mod that makes coal deposits in caves respawn after a configurable
 ## Features
 
 - Coal deposits (`RadialSpawn_coal`) automatically refill after they've been emptied
-- Four time presets selectable from **Options → Mods → Coal Respawn**:
+- **Five time presets** selectable from **Options → Mods → Coal Respawn**:
+  - Daily — 1 in-game day
   - Fast — 5 in-game days
   - Normal — 15 in-game days *(default)*
   - Slow — 30 in-game days
   - Realistic — 60 in-game days
+- **Respawn location** — choose where coal is allowed to respawn:
+  - Caves only
+  - Mines only
+  - Caves & Mines *(default)*
+  - Everywhere
 - Configurable min/max coal pieces spawned per deposit
 - Configurable scan radius
 - Save-game aware — respawn timers persist across saves / loads / sessions
@@ -44,9 +50,10 @@ Requires the game to be installed at the path set in the `.csproj` HintPath entr
 ## How It Works
 
 1. A coroutine wakes every 60 seconds and scans all `RadialObjectSpawner` objects whose name contains `coal`
-2. When no `GEAR_Coal` items are found within the scan radius, the spawner is marked *empty* with a timestamp (in game-hours)
-3. Once the configured respawn time has elapsed, 2–4 coal pieces are spawned at random offsets inside the deposit
-4. State is saved per-scene per-position via **ModData** — survives across sessions
+2. The current scene is checked against the **Respawn location** setting — if it doesn't match, the scan is skipped entirely
+3. When no `GEAR_Coal` items are found within the scan radius, the spawner is marked *empty* with a timestamp (in game-hours)
+4. Once the configured respawn time has elapsed, 2–4 coal pieces are spawned at random offsets inside the deposit
+5. State is saved per-scene per-position via **ModData** — survives across sessions
 
 ## License
 
