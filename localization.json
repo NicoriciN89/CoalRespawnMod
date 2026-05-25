@@ -12,7 +12,14 @@
     "CR.CHOICE_FAST": "Fast (5 days)",
     "CR.CHOICE_NORMAL": "Normal (15 days)",
     "CR.CHOICE_SLOW": "Slow (30 days)",
-    "CR.CHOICE_REALISTIC": "Realistic (60 days)"
+    "CR.CHOICE_DAILY": "Daily (1 day)",
+    "CR.CHOICE_REALISTIC": "Realistic (60 days)",
+    "CR.LOCATION": "Respawn location",
+    "CR.DESC_LOCATION": "Which scenes coal deposits are allowed to respawn in.\n\n  Caves only    — cave interiors\n  Mines only    — mine / tunnel scenes\n  Caves & Mines — both (default)\n  Everywhere    — all playable scenes",
+    "CR.LOC_CAVES": "Caves only",
+    "CR.LOC_MINES": "Mines only",
+    "CR.LOC_BOTH": "Caves & Mines",
+    "CR.LOC_EVERYWHERE": "Everywhere"
   },
   "Russian": {
     "CR.SECTION": "Возрождение угля в пещерах",
@@ -27,7 +34,14 @@
     "CR.CHOICE_FAST": "Быстро (5 дней)",
     "CR.CHOICE_NORMAL": "Нормально (15 дней)",
     "CR.CHOICE_SLOW": "Медленно (30 дней)",
-    "CR.CHOICE_REALISTIC": "Реалистично (60 дней)"
+    "CR.CHOICE_DAILY": "Ежедневно (1 день)",
+    "CR.CHOICE_REALISTIC": "Реалистично (60 дней)",
+    "CR.LOCATION": "Место возрождения",
+    "CR.DESC_LOCATION": "В каких сценах разрешено возрождение угля.\n\n  Только пещеры  — пещерные сцены\n  Только шахты   — шахты и тоннели\n  Пещеры и шахты — оба варианта (по умолчанию)\n  Везде          — все игровые сцены",
+    "CR.LOC_CAVES": "Только пещеры",
+    "CR.LOC_MINES": "Только шахты",
+    "CR.LOC_BOTH": "Пещеры и шахты",
+    "CR.LOC_EVERYWHERE": "Везде"
   },
   "French": {
     "CR.SECTION": "Réapparition du Charbon en Grotte",
@@ -42,7 +56,14 @@
     "CR.CHOICE_FAST": "Rapide (5 j.)",
     "CR.CHOICE_NORMAL": "Normal (15 j.)",
     "CR.CHOICE_SLOW": "Lent (30 j.)",
-    "CR.CHOICE_REALISTIC": "Réaliste (60 j.)"
+    "CR.CHOICE_DAILY": "Quotidien (1 jour)",
+    "CR.CHOICE_REALISTIC": "Réaliste (60 j.)",
+    "CR.LOCATION": "Lieu de réapparition",
+    "CR.DESC_LOCATION": "Dans quelles scènes le charbon peut réapparaître.\n\n  Grottes seules  — intérieurs de grottes\n  Mines seules    — mines / tunnels\n  Grottes & Mines — les deux (défaut)\n  Partout         — toutes les scènes jouables",
+    "CR.LOC_CAVES": "Grottes seules",
+    "CR.LOC_MINES": "Mines seules",
+    "CR.LOC_BOTH": "Grottes & Mines",
+    "CR.LOC_EVERYWHERE": "Partout"
   },
   "German": {
     "CR.SECTION": "Kohle-Respawn in Höhlen",
@@ -57,7 +78,14 @@
     "CR.CHOICE_FAST": "Schnell (5 T.)",
     "CR.CHOICE_NORMAL": "Normal (15 T.)",
     "CR.CHOICE_SLOW": "Langsam (30 T.)",
-    "CR.CHOICE_REALISTIC": "Realistisch (60 T.)"
+    "CR.CHOICE_DAILY": "Täglich (1 Tag)",
+    "CR.CHOICE_REALISTIC": "Realistisch (60 T.)",
+    "CR.LOCATION": "Respawn-Ort",
+    "CR.DESC_LOCATION": "In welchen Szenen Kohle wieder erscheinen darf.\n\n  Nur Höhlen     — Höhlen-Innenräume\n  Nur Minen      — Minen / Tunnel\n  Höhlen & Minen — beides (Standard)\n  Überall        — alle spielbaren Szenen",
+    "CR.LOC_CAVES": "Nur Höhlen",
+    "CR.LOC_MINES": "Nur Minen",
+    "CR.LOC_BOTH": "Höhlen & Minen",
+    "CR.LOC_EVERYWHERE": "Überall"
   },
   "Spanish": {
     "CR.SECTION": "Reaparición de Carbón en Cuevas",
@@ -72,7 +100,14 @@
     "CR.CHOICE_FAST": "Rápido (5 días)",
     "CR.CHOICE_NORMAL": "Normal (15 días)",
     "CR.CHOICE_SLOW": "Lento (30 días)",
-    "CR.CHOICE_REALISTIC": "Realista (60 días)"
+    "CR.CHOICE_DAILY": "Diario (1 día)",
+    "CR.CHOICE_REALISTIC": "Realista (60 días)",
+    "CR.LOCATION": "Ubicación de reaparición",
+    "CR.DESC_LOCATION": "En qué escenas puede reaparecer el carbón.\n\n  Solo cuevas    — interiores de cuevas\n  Solo minas     — minas / túneles\n  Cuevas & Minas — ambos (predeterminado)\n  En todos lados — todas las escenas jugables",
+    "CR.LOC_CAVES": "Solo cuevas",
+    "CR.LOC_MINES": "Solo minas",
+    "CR.LOC_BOTH": "Cuevas & Minas",
+    "CR.LOC_EVERYWHERE": "En todos lados"
   },
   "Brazilian": {
     "CR.SECTION": "Reaparecimento de Carvão em Cavernas",
@@ -87,7 +122,14 @@
     "CR.CHOICE_FAST": "Rápido (5 dias)",
     "CR.CHOICE_NORMAL": "Normal (15 dias)",
     "CR.CHOICE_SLOW": "Lento (30 dias)",
-    "CR.CHOICE_REALISTIC": "Realista (60 dias)"
+    "CR.CHOICE_DAILY": "Diário (1 dia)",
+    "CR.CHOICE_REALISTIC": "Realista (60 dias)",
+    "CR.LOCATION": "Local de reaparecimento",
+    "CR.DESC_LOCATION": "Em quais cenas o carvão pode reaparecer.\n\n  Apenas cavernas   — interiores de cavernas\n  Apenas minas      — minas / túneis\n  Cavernas & Minas  — ambos (padrão)\n  Em todos os lados — todas as cenas jogáveis",
+    "CR.LOC_CAVES": "Apenas cavernas",
+    "CR.LOC_MINES": "Apenas minas",
+    "CR.LOC_BOTH": "Cavernas & Minas",
+    "CR.LOC_EVERYWHERE": "Em todos os lados"
   },
   "Polish": {
     "CR.SECTION": "Odrodzenie Węgla w Jaskiniach",
@@ -102,7 +144,14 @@
     "CR.CHOICE_FAST": "Szybko (5 dni)",
     "CR.CHOICE_NORMAL": "Normalnie (15 dni)",
     "CR.CHOICE_SLOW": "Wolno (30 dni)",
-    "CR.CHOICE_REALISTIC": "Realistycznie (60 dni)"
+    "CR.CHOICE_DAILY": "Codziennie (1 dzień)",
+    "CR.CHOICE_REALISTIC": "Realistycznie (60 dni)",
+    "CR.LOCATION": "Miejsce odrodzenia",
+    "CR.DESC_LOCATION": "W jakich scenach węgiel może się odrodzić.\n\n  Tylko jaskinie      — wnętrza jaskiń\n  Tylko kopalnie      — kopalnie / tunele\n  Jaskinie i kopalnie — oba (domyślnie)\n  Wszędzie            — wszystkie sceny",
+    "CR.LOC_CAVES": "Tylko jaskinie",
+    "CR.LOC_MINES": "Tylko kopalnie",
+    "CR.LOC_BOTH": "Jaskinie i kopalnie",
+    "CR.LOC_EVERYWHERE": "Wszędzie"
   },
   "Czech": {
     "CR.SECTION": "Obnova Uhlí v Jeskyních",
@@ -117,7 +166,14 @@
     "CR.CHOICE_FAST": "Rychle (5 dní)",
     "CR.CHOICE_NORMAL": "Normálně (15 dní)",
     "CR.CHOICE_SLOW": "Pomalu (30 dní)",
-    "CR.CHOICE_REALISTIC": "Realisticky (60 dní)"
+    "CR.CHOICE_DAILY": "Denně (1 den)",
+    "CR.CHOICE_REALISTIC": "Realisticky (60 dní)",
+    "CR.LOCATION": "Místo obnovy",
+    "CR.DESC_LOCATION": "Ve kterých scénách se může uhlí obnovit.\n\n  Pouze jeskyně  — interiéry jeskyní\n  Pouze doly     — doly / tunely\n  Jeskyně a doly — obojí (výchozí)\n  Všude          — všechny hratelné scény",
+    "CR.LOC_CAVES": "Pouze jeskyně",
+    "CR.LOC_MINES": "Pouze doly",
+    "CR.LOC_BOTH": "Jeskyně a doly",
+    "CR.LOC_EVERYWHERE": "Všude"
   },
   "Turkish": {
     "CR.SECTION": "Mağaralarda Kömür Yeniden Doğuşu",
@@ -132,7 +188,14 @@
     "CR.CHOICE_FAST": "Hızlı (5 gün)",
     "CR.CHOICE_NORMAL": "Normal (15 gün)",
     "CR.CHOICE_SLOW": "Yavaş (30 gün)",
-    "CR.CHOICE_REALISTIC": "Gerçekçi (60 gün)"
+    "CR.CHOICE_DAILY": "Günlük (1 gün)",
+    "CR.CHOICE_REALISTIC": "Gerçekçi (60 gün)",
+    "CR.LOCATION": "Yeniden doğuş yeri",
+    "CR.DESC_LOCATION": "Kömürün hangi sahnelerde yeniden doğabileceği.\n\n  Yalnızca mağaralar   — mağara iç mekânları\n  Yalnızca madenler    — maden / tünel sahneleri\n  Mağaralar & Madenler — her ikisi (varsayılan)\n  Her yerde            — tüm oynanabilir sahneler",
+    "CR.LOC_CAVES": "Yalnızca mağaralar",
+    "CR.LOC_MINES": "Yalnızca madenler",
+    "CR.LOC_BOTH": "Mağaralar & Madenler",
+    "CR.LOC_EVERYWHERE": "Her yerde"
   },
   "Italian": {
     "CR.SECTION": "Rinascita del Carbone nelle Grotte",
@@ -147,7 +210,14 @@
     "CR.CHOICE_FAST": "Veloce (5 gg)",
     "CR.CHOICE_NORMAL": "Normale (15 gg)",
     "CR.CHOICE_SLOW": "Lento (30 gg)",
-    "CR.CHOICE_REALISTIC": "Realistico (60 gg)"
+    "CR.CHOICE_DAILY": "Giornaliero (1 giorno)",
+    "CR.CHOICE_REALISTIC": "Realistico (60 gg)",
+    "CR.LOCATION": "Posizione di rinascita",
+    "CR.DESC_LOCATION": "In quali scene il carbone può rinascere.\n\n  Solo grotte      — interni delle grotte\n  Solo miniere     — miniere / tunnel\n  Grotte & Miniere — entrambi (predefinito)\n  Ovunque          — tutte le scene giocabili",
+    "CR.LOC_CAVES": "Solo grotte",
+    "CR.LOC_MINES": "Solo miniere",
+    "CR.LOC_BOTH": "Grotte & Miniere",
+    "CR.LOC_EVERYWHERE": "Ovunque"
   },
   "Dutch": {
     "CR.SECTION": "Koolrespawn in Grotten",
@@ -162,7 +232,14 @@
     "CR.CHOICE_FAST": "Snel (5 d.)",
     "CR.CHOICE_NORMAL": "Normaal (15 d.)",
     "CR.CHOICE_SLOW": "Langzaam (30 d.)",
-    "CR.CHOICE_REALISTIC": "Realistisch (60 d.)"
+    "CR.CHOICE_DAILY": "Dagelijks (1 dag)",
+    "CR.CHOICE_REALISTIC": "Realistisch (60 d.)",
+    "CR.LOCATION": "Respawn-locatie",
+    "CR.DESC_LOCATION": "In welke scènes kolen opnieuw kunnen spawnen.\n\n  Alleen grotten   — grot-interieurs\n  Alleen mijnen    — mijnen / tunnels\n  Grotten & Mijnen — beide (standaard)\n  Overal           — alle speelbare scènes",
+    "CR.LOC_CAVES": "Alleen grotten",
+    "CR.LOC_MINES": "Alleen mijnen",
+    "CR.LOC_BOTH": "Grotten & Mijnen",
+    "CR.LOC_EVERYWHERE": "Overal"
   },
   "Japanese": {
     "CR.SECTION": "洞窟の石炭リスポーン",
@@ -177,7 +254,14 @@
     "CR.CHOICE_FAST": "速い (5日)",
     "CR.CHOICE_NORMAL": "普通 (15日)",
     "CR.CHOICE_SLOW": "遅い (30日)",
-    "CR.CHOICE_REALISTIC": "リアル (60日)"
+    "CR.CHOICE_DAILY": "毎日 (1日)",
+    "CR.CHOICE_REALISTIC": "リアル (60日)",
+    "CR.LOCATION": "リスポーン場所",
+    "CR.DESC_LOCATION": "石炭がリスポーンできるシーンを選択します。\n\n  洞窟のみ    — 洞窟の内部シーン\n  鉱山のみ    — 鉱山・トンネルシーン\n  洞窟と鉱山  — 両方（デフォルト）\n  どこでも    — すべてのプレイ可能なシーン",
+    "CR.LOC_CAVES": "洞窟のみ",
+    "CR.LOC_MINES": "鉱山のみ",
+    "CR.LOC_BOTH": "洞窟と鉱山",
+    "CR.LOC_EVERYWHERE": "どこでも"
   },
   "Korean": {
     "CR.SECTION": "동굴 석탄 리스폰",
@@ -192,7 +276,14 @@
     "CR.CHOICE_FAST": "빠름 (5일)",
     "CR.CHOICE_NORMAL": "보통 (15일)",
     "CR.CHOICE_SLOW": "느림 (30일)",
-    "CR.CHOICE_REALISTIC": "현실적 (60일)"
+    "CR.CHOICE_DAILY": "매일 (1일)",
+    "CR.CHOICE_REALISTIC": "현실적 (60일)",
+    "CR.LOCATION": "리스폰 위치",
+    "CR.DESC_LOCATION": "석탄이 리스폰될 수 있는 씬을 선택합니다.\n\n  동굴만      — 동굴 내부 씬\n  광산만      — 광산 / 터널 씬\n  동굴 & 광산 — 둘 다 (기본)\n  어디서나    — 모든 플레이 가능한 씬",
+    "CR.LOC_CAVES": "동굴만",
+    "CR.LOC_MINES": "광산만",
+    "CR.LOC_BOTH": "동굴 & 광산",
+    "CR.LOC_EVERYWHERE": "어디서나"
   },
   "ChineseSimplified": {
     "CR.SECTION": "洞穴煤炭重生",
@@ -207,7 +298,14 @@
     "CR.CHOICE_FAST": "快速 (5天)",
     "CR.CHOICE_NORMAL": "普通 (15天)",
     "CR.CHOICE_SLOW": "缓慢 (30天)",
-    "CR.CHOICE_REALISTIC": "真实 (60天)"
+    "CR.CHOICE_DAILY": "每天 (1天)",
+    "CR.CHOICE_REALISTIC": "真实 (60天)",
+    "CR.LOCATION": "重生位置",
+    "CR.DESC_LOCATION": "煤炭可以重生的场景。\n\n  仅洞穴     — 洞穴内部场景\n  仅矿山     — 矿山 / 隧道场景\n  洞穴和矿山 — 两者都有（默认）\n  所有地方   — 所有可玩场景",
+    "CR.LOC_CAVES": "仅洞穴",
+    "CR.LOC_MINES": "仅矿山",
+    "CR.LOC_BOTH": "洞穴和矿山",
+    "CR.LOC_EVERYWHERE": "所有地方"
   },
   "ChineseTraditional": {
     "CR.SECTION": "洞穴煤炭重生",
@@ -222,6 +320,13 @@
     "CR.CHOICE_FAST": "快速 (5天)",
     "CR.CHOICE_NORMAL": "普通 (15天)",
     "CR.CHOICE_SLOW": "緩慢 (30天)",
-    "CR.CHOICE_REALISTIC": "真實 (60天)"
+    "CR.CHOICE_DAILY": "每天 (1天)",
+    "CR.CHOICE_REALISTIC": "真實 (60天)",
+    "CR.LOCATION": "重生位置",
+    "CR.DESC_LOCATION": "煤炭可以重生的場景。\n\n  僅洞穴     — 洞穴內部場景\n  僅礦山     — 礦山 / 隧道場景\n  洞穴和礦山 — 兩者都有（預設）\n  所有地方   — 所有可玩場景",
+    "CR.LOC_CAVES": "僅洞穴",
+    "CR.LOC_MINES": "僅礦山",
+    "CR.LOC_BOTH": "洞穴和礦山",
+    "CR.LOC_EVERYWHERE": "所有地方"
   }
 }

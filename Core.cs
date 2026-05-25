@@ -42,7 +42,7 @@ namespace CoalRespawnMod
         private const float  InitialDelay      = 6f;  // задержка после загрузки сцены
 
         // Дни для каждого пресета (индекс = respawnPreset)
-        private static readonly int[] RespawnPresetDays = { 5, 15, 30, 60 };
+        private static readonly int[] RespawnPresetDays = { 1, 5, 15, 30, 60 };
 
         public static float GetRespawnHours()
         {
@@ -62,6 +62,21 @@ namespace CoalRespawnMod
             !scene.Contains("MainMenu") &&
             scene != "Boot" &&
             scene != "Empty";
+
+        private static bool IsAllowedScene(string scene)
+        {
+            if (string.IsNullOrEmpty(scene)) return false;
+            string lower = scene.ToLowerInvariant();
+            int loc = Math.Clamp(Settings.instance.locationPreset, 0, 3);
+            return loc switch
+            {
+                0 => lower.Contains("cave"),
+                1 => lower.Contains("mine"),
+                2 => lower.Contains("cave") || lower.Contains("mine"),
+                3 => true,
+                _ => lower.Contains("cave") || lower.Contains("mine")
+            };
+        }
 
         public static string SpawnerKey(string scene, Vector3 pos) =>
             $"{scene}|{pos.x:F1}|{pos.y:F1}|{pos.z:F1}";
@@ -125,6 +140,7 @@ namespace CoalRespawnMod
         {
             string scene = GameManager.m_ActiveScene;
             if (!IsPlayableScene(scene)) return;
+            if (!IsAllowedScene(scene)) return;
 
             float nowHours     = GameManager.GetTimeOfDayComponent().GetHoursPlayedNotPaused();
             float respawnHours = GetRespawnHours();
