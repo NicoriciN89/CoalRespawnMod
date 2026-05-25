@@ -19,7 +19,7 @@ namespace CoalRespawnMod
 
         [Name("CR.RESPAWN_TIME", Localize = true)]
         [Description("CR.DESC_RESPAWN_TIME", Localize = true)]
-        [Choice(new string[] { "Fast (5 days)", "Normal (15 days)", "Slow (30 days)", "Realistic (60 days)" })]
+        [Choice(new string[] { "CR.CHOICE_FAST", "CR.CHOICE_NORMAL", "CR.CHOICE_SLOW", "CR.CHOICE_REALISTIC" }, Localize = true)]
         public int respawnPreset = 1;   // 0=5d  1=15d  2=30d  3=60d
 
         [Name("CR.MIN_COAL", Localize = true)]
