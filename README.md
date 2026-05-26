@@ -1,6 +1,6 @@
 # Coal Respawn Mod — The Long Dark
 
-A MelonLoader mod that makes coal deposits in caves respawn after a configurable amount of time.
+A MelonLoader mod that adds configurable options for coal deposit respawning — choose where deposits refill, how quickly, and how much coal appears.
 
 ## Features
 

@@ -23,7 +23,7 @@ namespace CoalRespawnMod
 
         private static Dictionary<string, Dictionary<string, string>> Load()
         {
-            // 1. Пользовательский оверрайд: UserData/CoalRespawnMod/localization.json
+            // 1. User override: UserData/CoalRespawnMod/localization.json
             string dllDir   = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? "";
             string userPath = Path.Combine(
                 Path.GetDirectoryName(dllDir) ?? dllDir,
@@ -39,7 +39,7 @@ namespace CoalRespawnMod
                 }
             }
 
-            // 2. Встроенный ресурс внутри DLL
+            // 2. Embedded resource inside the DLL
             var asm    = Assembly.GetExecutingAssembly();
             var stream = asm.GetManifestResourceStream(EmbeddedResource);
             if (stream != null)

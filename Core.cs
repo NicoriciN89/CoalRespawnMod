@@ -15,10 +15,9 @@ using UnityEngine;
 
 namespace CoalRespawnMod
 {
-    // emptyAt   : ключ спаунера → игровое время (ч) когда он опустел
-    // respawnAt : ключ спаунера → игровое время (ч) когда мы его пересоздали
-    //             (нужно чтобы переспаунить уголь заново после загрузки сейва,
-    //              пока игрок его не подберёт)
+    // emptyAt   : spawnerKey → game-time (hrs) when the deposit was emptied
+    // respawnAt : spawnerKey → game-time (hrs) when the mod last refilled it
+    //             (needed to re-place coal after a save reload, before the player picks it up)
     public class CoalSaveData
     {
         public Dictionary<string, Dictionary<string, float>> emptyAt   { get; set; } = new();
@@ -29,19 +28,19 @@ namespace CoalRespawnMod
     {
         internal static MelonLogger.Instance Log;
 
-        // scene → (spawnerKey → час опустения)
+        // scene → (spawnerKey → hour emptied)
         internal static Dictionary<string, Dictionary<string, float>> emptyAt   = new();
-        // scene → (spawnerKey → час последнего спауна нашим модом)
+        // scene → (spawnerKey → hour of last mod-triggered spawn)
         internal static Dictionary<string, Dictionary<string, float>> respawnAt = new();
 
         internal static ModDataManager dataManager = new ModDataManager("CoalRespawnMod", false);
         internal static object         coroutineHandle;
 
         private const string SaveTag           = "coalRespawn";
-        private const float  CoroutineInterval = 60f; // реальных секунд между проверками
-        private const float  InitialDelay      = 6f;  // задержка после загрузки сцены
+        private const float  CoroutineInterval = 60f; // real seconds between checks
+        private const float  InitialDelay      = 6f;  // initial delay after scene load
 
-        // Дни для каждого пресета (индекс = respawnPreset)
+        // days per preset index (matches respawnPreset)
         private static readonly int[] RespawnPresetDays = { 1, 5, 15, 30, 60 };
 
         public static float GetRespawnHours()
@@ -96,7 +95,7 @@ namespace CoalRespawnMod
             }
             catch (Exception e)
             {
-                Log?.Warning($"[CoalRespawnMod] Ошибка загрузки данных: {e.Message}");
+                Log?.Warning($"[CoalRespawnMod] Failed to load save data: {e.Message}");
                 emptyAt   = new();
                 respawnAt = new();
             }
@@ -116,7 +115,7 @@ namespace CoalRespawnMod
 
         public static IEnumerator CoalRespawnLoop()
         {
-            // Небольшая задержка: дать игре время полностью загрузить сцену и расставить объекты
+            // Brief delay to let the scene fully load and place all objects
             for (float t = 0f; t < InitialDelay; t += Time.deltaTime)
             {
                 if (!IsPlayableScene(GameManager.m_ActiveScene)) yield break;
@@ -127,7 +126,7 @@ namespace CoalRespawnMod
             {
                 ProcessCoalSpawners();
 
-                // Ждём следующий интервал
+                // Wait for the next interval
                 for (float t = 0f; t < CoroutineInterval; t += Time.deltaTime)
                 {
                     if (!IsPlayableScene(GameManager.m_ActiveScene)) yield break;
@@ -146,11 +145,11 @@ namespace CoalRespawnMod
             float respawnHours = GetRespawnHours();
             float radius       = Settings.instance.scanRadius;
 
-            // Убедимся что словари для сцены существуют
+            // Ensure per-scene dictionaries exist
             if (!emptyAt.ContainsKey(scene))   emptyAt[scene]   = new();
             if (!respawnAt.ContainsKey(scene))  respawnAt[scene] = new();
 
-            // Найти все угольные спаунеры в сцене
+            // Find all coal spawners in the scene
             var spawners = UnityEngine.Object.FindObjectsOfType<RadialObjectSpawner>();
             foreach (var spawner in spawners)
             {
@@ -163,37 +162,37 @@ namespace CoalRespawnMod
 
                 if (cnt > 0)
                 {
-                    // Уголь есть — снимаем метки если они были
+                    // Coal present — clear any stale markers
                     emptyAt[scene].Remove(key);
                     respawnAt[scene].Remove(key);
                     continue;
                 }
 
-                // Был ли спаунер недавно пересоздан нашим модом?
-                // (Уголь мог исчезнуть после загрузки сейва — перезаспауним)
+                // Was this spawner recently refilled by the mod?
+                // (coal may have de-spawned on save reload — re-place it)
                 if (respawnAt[scene].ContainsKey(key))
                 {
                     DoSpawnCoal(pos, radius);
-                    Log?.Msg($"[CoalRespawnMod] Переспаун после загрузки: {spawner.name}");
+                    Log?.Msg($"[CoalRespawnMod] Re-spawn after reload: {spawner.name}");
                     continue;
                 }
 
-                // Спаунер только что опустел?
+                // Spawner just became empty?
                 if (!emptyAt[scene].ContainsKey(key))
                 {
                     emptyAt[scene][key] = nowHours;
-                    Log?.Msg($"[CoalRespawnMod] Спаунер опустел: {spawner.name} @ {pos}");
+                    Log?.Msg($"[CoalRespawnMod] Deposit emptied: {spawner.name} @ {pos}");
                     continue;
                 }
 
-                // Таймер истёк?
+                // Timer expired?
                 float emptiedAt = emptyAt[scene][key];
                 if (nowHours >= emptiedAt + respawnHours)
                 {
                     DoSpawnCoal(pos, radius);
                     emptyAt[scene].Remove(key);
                     respawnAt[scene][key] = nowHours;
-                    Log?.Msg($"[CoalRespawnMod] Уголь возродился: {spawner.name} @ {pos}");
+                    Log?.Msg($"[CoalRespawnMod] Coal respawned: {spawner.name} @ {pos}");
                 }
             }
         }
@@ -221,7 +220,7 @@ namespace CoalRespawnMod
 
             GearItem prefab = null;
             try { prefab = GearItem.LoadGearItemPrefab("GEAR_Coal"); }
-            catch (Exception e) { Log?.Warning($"[CoalRespawnMod] Не удалось загрузить GEAR_Coal: {e.Message}"); }
+            catch (Exception e) { Log?.Warning($"[CoalRespawnMod] Failed to load GEAR_Coal: {e.Message}"); }
 
             if (prefab == null) { Log?.Warning("[CoalRespawnMod] GEAR_Coal prefab == null"); return; }
 
