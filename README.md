@@ -1,25 +1,36 @@
 # Coal Respawn Mod — The Long Dark
 
+![GitHub release](https://img.shields.io/github/v/release/NicoriciN89/CoalRespawnMod?label=release)
+![License](https://img.shields.io/github/license/NicoriciN89/CoalRespawnMod)
+
 A MelonLoader mod that adds configurable options for coal deposit respawning — choose where deposits refill, how quickly, and how much coal appears.
 
 ## Features
 
-- Coal deposits (`RadialSpawn_coal`) automatically refill after they've been emptied
-- **Five time presets** selectable from **Options → Mods → Coal Respawn**:
-  - Daily — 1 in-game day
-  - Fast — 5 in-game days
-  - Normal — 15 in-game days *(default)*
-  - Slow — 30 in-game days
-  - Realistic — 60 in-game days
-- **Respawn location** — choose where coal is allowed to respawn:
-  - Caves only
-  - Mines only
-  - Caves & Mines *(default)*
-  - Everywhere
-- Configurable min/max coal pieces spawned per deposit
-- Configurable scan radius
-- Save-game aware — respawn timers persist across saves / loads / sessions
-- Full localization support (15 languages matching the game)
+- Coal deposits automatically refill after they've been emptied
+- **Respawn time** — five presets:
+
+  | Preset | In-game time |
+  |---|---|
+  | Daily | 1 day |
+  | Fast | 5 days |
+  | Normal | 15 days *(default)* |
+  | Slow | 30 days |
+  | Realistic | 60 days |
+
+- **Respawn location** — choose which scenes are affected:
+
+  | Option | Description |
+  |---|---|
+  | Caves only | Cave interiors |
+  | Mines only | Mine / tunnel scenes |
+  | Caves & Mines | Both *(default)* |
+  | Everywhere | All playable scenes |
+
+- Configurable min/max coal pieces per deposit (1–8)
+- Configurable scan radius (1–12 m)
+- Save-game aware — timers persist across saves, loads, and sessions
+- Fully localised — 15 languages matching the base game
 
 ## Supported Languages
 
