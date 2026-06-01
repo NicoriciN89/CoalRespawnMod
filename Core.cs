@@ -9,7 +9,7 @@ using MelonLoader;
 using ModData;
 using UnityEngine;
 
-[assembly: MelonInfo(typeof(CoalRespawnMod.Core), "CoalRespawnMod", "1.0.0", "NnicolaeN")]
+[assembly: MelonInfo(typeof(CoalRespawnMod.Core), "CoalRespawnMod", "1.1.1", "NnicolaeN")]
 [assembly: MelonGame("Hinterland", "TheLongDark")]
 [assembly: MelonColor(255, 64, 64, 64)]
 
@@ -53,7 +53,7 @@ namespace CoalRespawnMod
         {
             Log = LoggerInstance;
             Settings.OnLoad();
-            Log.Msg("CoalRespawnMod v1.0.0 loaded");
+            Log.Msg("CoalRespawnMod v1.1.1 loaded");
         }
 
         public static bool IsPlayableScene(string scene) =>
@@ -173,6 +173,7 @@ namespace CoalRespawnMod
                 if (respawnAt[scene].ContainsKey(key))
                 {
                     DoSpawnCoal(pos, radius);
+                    respawnAt[scene].Remove(key); // prevent infinite re-spawn if player picks it up after reload
                     Log?.Msg($"[CoalRespawnMod] Re-spawn after reload: {spawner.name}");
                     continue;
                 }
@@ -214,9 +215,9 @@ namespace CoalRespawnMod
 
         private static void DoSpawnCoal(Vector3 center, float radius)
         {
-            int count = UnityEngine.Random.Range(
-                Settings.instance.minCoal,
-                Settings.instance.maxCoal + 1);
+            int min   = Settings.instance.minCoal;
+            int max   = Math.Max(Settings.instance.maxCoal, min);
+            int count = UnityEngine.Random.Range(min, max + 1);
 
             GearItem prefab = null;
             try { prefab = GearItem.LoadGearItemPrefab("GEAR_Coal"); }

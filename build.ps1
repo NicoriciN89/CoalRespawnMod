@@ -14,7 +14,7 @@ $ProjectDir  = $PSScriptRoot
 $ProjectFile = Join-Path $ProjectDir "CoalRespawnMod.csproj"
 $Config      = if ($Debug) { "Debug" } else { "Release" }
 $OutputDir   = Join-Path $ProjectDir "bin\$Config\net6.0"
-$ModsDir     = Join-Path $ProjectDir "..\Mods"
+$ModsDir     = Join-Path $ProjectDir "..\..\Mods"
 $ModName     = "CoalRespawnMod"
 
 Write-Host "===============================================" -ForegroundColor DarkCyan

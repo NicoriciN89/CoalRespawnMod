@@ -79,12 +79,23 @@ namespace CoalRespawnMod
                 ["CR.SECTION"]           = "Cave Coal Respawn",
                 ["CR.RESPAWN_TIME"]      = "Respawn time",
                 ["CR.DESC_RESPAWN_TIME"] = "How long before an emptied coal deposit refills.\n  Fast: 5d  Normal: 15d  Slow: 30d  Realistic: 60d",
+                ["CR.CHOICE_DAILY"]      = "Daily (1 day)",
+                ["CR.CHOICE_FAST"]       = "Fast (5 days)",
+                ["CR.CHOICE_NORMAL"]     = "Normal (15 days)",
+                ["CR.CHOICE_SLOW"]       = "Slow (30 days)",
+                ["CR.CHOICE_REALISTIC"]  = "Realistic (60 days)",
                 ["CR.MIN_COAL"]          = "Min coal pieces",
                 ["CR.DESC_MIN_COAL"]     = "Minimum GEAR_Coal pieces spawned per deposit. Default: 2",
                 ["CR.MAX_COAL"]          = "Max coal pieces",
                 ["CR.DESC_MAX_COAL"]     = "Maximum GEAR_Coal pieces spawned per deposit. Default: 4",
                 ["CR.SCAN_RADIUS"]       = "Scan radius (m)",
                 ["CR.DESC_SCAN_RADIUS"]  = "Radius in metres to detect coal around each deposit. Default: 4",
+                ["CR.LOCATION"]          = "Respawn location",
+                ["CR.DESC_LOCATION"]     = "Which scenes coal deposits are allowed to respawn in.",
+                ["CR.LOC_CAVES"]         = "Caves only",
+                ["CR.LOC_MINES"]         = "Mines only",
+                ["CR.LOC_BOTH"]          = "Caves & Mines",
+                ["CR.LOC_EVERYWHERE"]    = "Everywhere",
             }
         };
     }
