@@ -6,8 +6,8 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <DebugType>embedded</DebugType>
-    <AssemblyName>CoalRespawnMod</AssemblyName>
-    <RootNamespace>CoalRespawnMod</RootNamespace>
+    <AssemblyName>WildernessRenewableMod</AssemblyName>
+    <RootNamespace>WildernessRenewableMod</RootNamespace>
 
     <GameDir>E:\games\TheLongDark</GameDir>
     <MelonLoaderDir>$(GameDir)\MelonLoader</MelonLoaderDir>

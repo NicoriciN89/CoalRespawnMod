@@ -2,9 +2,8 @@ using HarmonyLib;
 using Il2Cpp;
 using MelonLoader;
 
-namespace CoalRespawnMod
+namespace WildernessRenewableMod
 {
-
     [HarmonyPatch(typeof(SaveGameSystem), nameof(SaveGameSystem.LoadSceneData))]
     internal static class Patch_LoadSceneData
     {
@@ -15,7 +14,6 @@ namespace CoalRespawnMod
         }
     }
 
-
     [HarmonyPatch(typeof(SaveGameSystem), nameof(SaveGameSystem.SaveSceneData))]
     internal static class Patch_SaveSceneData
     {
@@ -24,7 +22,6 @@ namespace CoalRespawnMod
             Core.SaveData();
         }
     }
-
 
     [HarmonyPatch(typeof(GameManager), nameof(GameManager.DoExitToMainMenu))]
     internal static class Patch_ExitToMenu
